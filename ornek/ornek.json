@@ -1,0 +1,153 @@
+{
+ "id": "ay-dunyaya-yaklassaydi",
+ "format": "bilim",
+ "title": "Ya Ay Dünya'ya çarpsaydı?",
+ "hook": {
+  "say": "Ya Ay, Dünya'ya çarpsaydı?",
+  "text": "Ya Ay Dünya'ya çarpsaydı?",
+  "bg": "night",
+  "props": [
+   {
+    "type": "moon",
+    "anim": "approach",
+    "pos": "sky-center",
+    "size": "l"
+   }
+  ],
+  "hero": {
+   "action": "shock",
+   "pos": "center"
+  }
+ },
+ "scenes": [
+  {
+   "say": "Önce Ay, gökyüzünde her gece biraz daha büyük görünürdü. İlk başta herkes bunu çok romantik bulurdu.",
+   "bg": "night",
+   "props": [
+    {
+     "type": "moon",
+     "anim": "grow",
+     "pos": "sky-right",
+     "size": "l"
+    }
+   ],
+   "hero": {
+    "action": "point",
+    "pos": "left"
+   },
+   "label": "30. GECE"
+  },
+  {
+   "say": "Ama Ay yaklaştıkça çekimi de artardı. Dev gelgitler, kıyıdaki şehirleri sular altında bırakırdı.",
+   "bg": "beach",
+   "props": [
+    {
+     "type": "moon",
+     "anim": "pulse",
+     "pos": "sky-center",
+     "size": "m"
+    },
+    {
+     "type": "house",
+     "anim": "pop",
+     "pos": "ground-right",
+     "size": "s"
+    }
+   ],
+   "hero": {
+    "action": "run",
+    "pos": "left"
+   },
+   "weather": "water_rise"
+  },
+  {
+   "say": "Depremler ve volkanlar da uyanırdı. Kısacası, gezegen çok gergin bir döneme girerdi.",
+   "bg": "red",
+   "props": [
+    {
+     "type": "volcano",
+     "anim": "shake",
+     "pos": "ground-right",
+     "size": "l"
+    }
+   ],
+   "hero": {
+    "action": "panic_run"
+   }
+  },
+  {
+   "say": "Roche sınırı denen kritik noktaya gelince, Dünya'nın çekimi Ay'ı paramparça ederdi.",
+   "bg": "space",
+   "props": [
+    {
+     "type": "earth",
+     "anim": "idle",
+     "pos": "ground-center",
+     "size": "xl"
+    },
+    {
+     "type": "moon",
+     "anim": "break",
+     "pos": "sky-center",
+     "size": "m"
+    }
+   ],
+   "hero": {
+    "action": "shock"
+   },
+   "camera": "zoom",
+   "label": "ROCHE SINIRI"
+  },
+  {
+   "say": "Parçalar Dünya'nın etrafında dönerek, Satürn'ünki gibi bir halka oluştururdu. Manzara efsane olurdu.",
+   "bg": "space",
+   "props": [
+    {
+     "type": "planet",
+     "anim": "pulse",
+     "pos": "center",
+     "size": "xl",
+     "color": "#3f7fd6"
+    }
+   ],
+   "hero": {
+    "action": "happy",
+    "hidden": true
+   },
+   "label": "DÜNYA'NIN HALKASI"
+  },
+  {
+   "say": "Ama bu halkadan kopan kayalar, yıllarca gökten meteor yağmuru gibi yağardı!",
+   "bg": "night",
+   "props": [],
+   "hero": {
+    "action": "umbrella",
+    "pos": "center",
+    "say": "Şemsiye yeter mi?"
+   },
+   "weather": "meteors"
+  }
+ ],
+ "outro": {
+  "say": "Sen olsan ne yapardın? Yorumlara yaz!",
+  "question": "Sen olsan ne yapardın?",
+  "bg": "night",
+  "hero": {
+   "action": "shrug",
+   "pos": "center"
+  }
+ },
+ "meta": {
+  "title": "Ya Ay Dünya'ya çarpsaydı? 🌕",
+  "caption": "Ay her gün biraz daha yaklaşsaydı neler olurdu? 🌕💥",
+  "hashtags": [
+   "#yaolsaydı",
+   "#ay",
+   "#uzay",
+   "#bilim",
+   "#animasyon",
+   "#shorts"
+  ],
+  "comment": "🌕 Ay Dünya'ya doğru gelseydi sen ne yapardın? Sığınak mı kazardın, şemsiye mi alırdın? 👇"
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "id": "internet-kapansaydi",
+ "format": "bilim",
+ "title": "Ya internet bir gün tamamen kapansaydı?",
+ "hook": {"say": "Ya internet bir gün tamamen kapansaydı?", "text": "Ya internet tamamen kapansaydı?", "bg": "room",
+          "props": [{"type": "wifi", "anim": "off", "pos": "sky-right", "size": "m"}],
+          "hero": {"action": "shock", "pos": "left"}},
+ "scenes": [
+  {"say": "İlk dakikalarda herkes modemini kapatıp açardı. Tabii ki işe yaramazdı.", "bg": "room",
+   "props": [{"type": "laptop", "anim": "off", "pos": "ground-right", "size": "m"}],
+   "hero": {"action": "facepalm", "pos": "left"}, "label": "1. DAKİKA"},
+  {"say": "Kartla ödeme, mesajlaşma ve navigasyon durunca şehirde büyük bir karmaşa başlardı.", "bg": "city",
+   "props": [{"type": "money", "anim": "shake", "pos": "sky-right", "size": "m"}, {"type": "car", "anim": "fly_left", "pos": "ground-center", "size": "m"}],
+   "hero": {"action": "panic", "pos": "left"}},
+  {"say": "Bankalar, hava trafiği ve haberleşme yedek sistemlere geçerdi. İnsanlar yeniden kâğıt haritaya sarılırdı.", "bg": "day",
+   "props": [{"type": "plane", "anim": "fly", "pos": "sky-center", "size": "m"}, {"type": "book", "anim": "pop", "pos": "right", "size": "s"}],
+   "hero": {"action": "think", "pos": "left"}},
+  {"say": "Birkaç gün sonra ise komşular sokakta sohbet etmeye, çocuklar parkta oynamaya başlardı.", "bg": "forest",
+   "props": [{"type": "heart", "anim": "pulse", "pos": "sky-center", "size": "s"}],
+   "hero": {"action": "wave", "pos": "left"}, "friend": {"action": "happy", "pos": "right", "say": "Selam komşu!"}, "label": "3. GÜN"},
+  {"say": "Ama bir hafta sonra herkes aynı soruyu sorardı: Şifre neydi ya?", "bg": "night",
+   "props": [{"type": "question", "anim": "float", "pos": "sky-right", "size": "m"}],
+   "hero": {"action": "shrug", "pos": "left", "say": "Şifre neydi?"}}
+ ],
+ "outro": {"say": "Sen olsan internetsiz ilk gün ne yapardın? Yorumlara yaz!", "question": "Sen olsan ne yapardın?", "bg": "room",
+           "hero": {"action": "shrug", "pos": "center"}},
+ "meta": {"title": "İnternet tamamen kapansaydı ne olurdu? 📵 #shorts", "caption": "Bir sabah uyandın ve internet yok… Hem de hiçbir yerde! 📵",
+          "hashtags": ["#yaolsaydı", "#internet", "#teknoloji", "#animasyon", "#merak", "#shorts"],
+          "comment": "📵 İnternetsiz ilk gün ne yapardın? Ben direkt modemi kapatıp açardım 😅 Sen? 👇"}
+}

@@ -1,0 +1,29 @@
+{
+ "id": "ucmak-mi-gorunmezlik-mi",
+ "format": "secim",
+ "title": "Uçmak mı, görünmez olmak mı?",
+ "hook": {"say": "Ya sadece bir süper gücün olsaydı?", "text": "Ya bir süper gücün olsaydı?", "bg": "sunset",
+          "props": [{"type": "star", "anim": "spin", "pos": "sky-right", "size": "s"}],
+          "hero": {"action": "shock", "pos": "center"}},
+ "scenes": [
+  {"say": "Ama sadece birini seçebilirsin: uçabilmek mi, yoksa görünmez olmak mı?", "bg": "sunset",
+   "props": [], "hero": {"action": "think", "pos": "center"}, "choices": ["Uçabilmek", "Görünmez olmak"]},
+  {"say": "Uçmayı seçersen trafiğe veda edersin. Ama kışın bulutların arası buz gibidir!", "bg": "day",
+   "props": [{"type": "cloud", "anim": "fly_left", "pos": "sky-center", "size": "m"}, {"type": "car", "anim": "idle", "pos": "ground-right", "size": "s"}],
+   "hero": {"action": "celebrate", "pos": "left"}, "weather": "wind", "label": "A: UÇMAK"},
+  {"say": "Üstelik kuşlarla trafik kazası yapma ihtimalin de var.", "bg": "day",
+   "props": [{"type": "plane", "anim": "fly", "pos": "sky-center", "size": "m"}],
+   "hero": {"action": "scared", "pos": "left", "say": "Dikkat et!"}},
+  {"say": "Görünmez olursan sınavda kimse seni fark etmez. Ama fotoğraflarda da hiç çıkmazsın.", "bg": "room",
+   "props": [{"type": "ghost", "anim": "float", "pos": "right", "size": "m"}],
+   "hero": {"action": "sad", "pos": "left"}, "label": "B: GÖRÜNMEZLİK"},
+  {"say": "Ve kalabalıkta herkes sana çarpar, çünkü orada olduğunu kimse bilmez!", "bg": "city",
+   "props": [{"type": "crowd", "anim": "idle", "pos": "ground-right", "size": "l"}],
+   "hero": {"action": "fall", "pos": "left"}}
+ ],
+ "outro": {"say": "Sen olsan hangisini seçerdin? Uçmak mı, görünmezlik mi? Yorumlara yaz!", "question": "A mı, B mi?", "bg": "sunset",
+           "hero": {"action": "shrug", "pos": "center"}},
+ "meta": {"title": "Uçmak mı, görünmez olmak mı? 🦸 #shorts", "caption": "Tek bir süper güç seçebilseydin hangisini alırdın? 🦸",
+          "hashtags": ["#yaolsaydı", "#süpergüç", "#hangisi", "#animasyon", "#eğlence", "#shorts"],
+          "comment": "🦸 A mı, B mi? Kararını yorumlara yaz, en çok seçileni sabitleyeceğiz! 👇"}
+}
