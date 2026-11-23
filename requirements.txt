@@ -1,0 +1,6 @@
+numpy
+scipy
+soundfile
+playwright
+edge-tts>=6.1
+gTTS>=2.5

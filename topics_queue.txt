@@ -1,0 +1,32 @@
+# Her satır bir video konusu. Biçim:  tür: konu   (tür = bilim, hikaye ya da secim)
+# Sıradaki konu en üstteki satırdır. Liste bitince yapay zekâ konuyu kendisi seçer.
+bilim: Ya Dünya bir anda dönmeyi bıraksaydı?
+hikaye: Ya bir sabah kedin konuşmaya başlasaydı?
+bilim: Ya Güneş bir anda sönseydi?
+secim: Geçmişe gitmek mi, geleceğe gitmek mi?
+bilim: Ya bütün buzullar bir gecede erisaydi?
+hikaye: Ya telefonun bir gün sana itiraz etseydi?
+bilim: Ya bir hafta hiç uyumasaydık?
+secim: Hiç uyumamak mı, hiç acıkmamak mı?
+bilim: Ya Dünya'nın yerçekimi yarıya inseydi?
+hikaye: Ya dinozorlar hâlâ yaşasaydı ve komşun olsaydı?
+bilim: Ya Ay hiç olmasaydı?
+secim: Hayvanlarla konuşmak mı, bütün dilleri bilmek mi?
+bilim: Ya herkes bir gün aynı anda zıplasaydı?
+hikaye: Ya bir gün robotlar senin yerine okula/işe gitseydi?
+bilim: Ya elektrik bir hafta boyunca tamamen kesilseydi?
+secim: Zamanı durdurmak mı, geri sarmak mı?
+bilim: Ya Dünya'ya dev bir asteroit yaklaşsaydı?
+hikaye: Ya uzaylılar evine misafir gelseydi?
+bilim: Ya okyanuslar bir anda kurusaydı?
+secim: Uzayda bir yıl mı, okyanus dibinde bir yıl mı?
+bilim: Ya Dünya iki kat hızlı dönseydi?
+hikaye: Ya bir sabah herkes senin sesinle konuşsaydı?
+bilim: Ya bütün arılar yok olsaydı?
+secim: Hiç unutmamak mı, istediğini unutabilmek mi?
+bilim: Ya Dünya'da hiç gece olmasaydı?
+hikaye: Ya buzdolabın bir gün diyete karar verseydi?
+bilim: Ya insanlar fotosentez yapabilseydi?
+secim: Görünmez olmak mı, düşünce okumak mı?
+bilim: Ya Jüpiter Dünya'nın yerinde olsaydı?
+hikaye: Ya alarm saatin seni hiç uyandırmak istemeseydi?
