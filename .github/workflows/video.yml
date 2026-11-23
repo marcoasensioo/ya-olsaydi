@@ -1,0 +1,78 @@
+name: Ya Olsaydi
+on:
+  schedule:
+    - cron: "37 14 * * *"   # her gün 17:37 (Türkiye). GitHub bazen 1-2 saat geciktirebilir.
+  workflow_dispatch:
+    inputs:
+      onizleme:
+        description: "Sadece önizleme (video yap ama hiçbir yere yükleme, buradan indir)"
+        type: boolean
+        default: true
+      konu:
+        description: "İsteğe bağlı: bu konuyla yeni senaryo yaz (ör. bilim: Ya Güneş sönseydi?)"
+        type: string
+        default: ""
+permissions:
+  contents: write
+  models: read
+concurrency: ya-olsaydi
+jobs:
+  video:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: { python-version: "3.12" }
+      - run: sudo apt-get update && sudo apt-get install -y ffmpeg
+      - run: pip install -r requirements.txt
+      - name: Istenen konuyla senaryo yaz
+        if: ${{ inputs.konu != '' && inputs.konu != null }}
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          KONU: ${{ inputs.konu }}
+        run: python scriptgen.py "$KONU"
+      - name: Video uret ve yukle
+        env:
+          ONIZLEME: ${{ inputs.onizleme && '1' || '0' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          GEMINI_TTS_VOICE: ${{ vars.GEMINI_TTS_VOICE }}
+          CHIRP_TEMPO: ${{ vars.SES_HIZI }}
+          YT_UPLOAD: ${{ vars.YT_UPLOAD }}
+          YT_CLIENT_ID: ${{ secrets.YT_CLIENT_ID }}
+          YT_CLIENT_SECRET: ${{ secrets.YT_CLIENT_SECRET }}
+          YT_REFRESH_TOKEN: ${{ secrets.YT_REFRESH_TOKEN }}
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USERNAME: ${{ vars.IG_USERNAME }}
+          IG_UPLOAD: ${{ vars.IG_UPLOAD }}
+          IG_AI_LABEL: ${{ vars.IG_AI_LABEL }}
+          IG_KAPAK_MS: ${{ vars.IG_KAPAK_MS }}
+          IG_STORY: ${{ vars.IG_STORY }}
+          IG_COMMENT: ${{ vars.IG_COMMENT }}
+        run: python autopilot.py
+      - name: Onizleme videosunu indirilebilir yap
+        if: ${{ inputs.onizleme }}
+        uses: actions/upload-artifact@v4
+        with:
+          name: onizleme-video
+          path: out/*/*.mp4
+      - name: Instagram yorumlarina cevap ver
+        if: ${{ !inputs.onizleme }}
+        env:
+          IG_TOKEN: ${{ secrets.IG_TOKEN }}
+          IG_USERNAME: ${{ vars.IG_USERNAME }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          IG_CEVAP: ${{ vars.IG_CEVAP }}
+          IG_CEVAP_LIMIT: ${{ vars.IG_CEVAP_LIMIT }}
+        run: python cevaplar.py || true
+      - name: Durumu kaydet
+        if: ${{ always() }}
+        run: |
+          git config user.name "ya-olsaydi-bot"
+          git config user.email "bot@users.noreply.github.com"
+          git add state topics topics_queue.txt
+          git commit -m "durum guncellendi" || true
+          git push || true
